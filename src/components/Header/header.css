@@ -1,0 +1,20 @@
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center aligns the text vertically */
+    height: 100px; /* Adjust height based on your design */
+    background-color: #333; /* Example background color */
+  }
+  
+  .match {
+    font-family: 'Press Start 2P', cursive; /* Use the gaming font */
+    font-size: 2.5rem; /* Adjust font size as needed */
+    color: #fff; /* Text color */
+    margin: 0; /* Remove default margin */
+  }
+
+  #spa {
+    font-size: inherit; /* Ensures it inherits the font size from parent */
+    color: #fff; /* Text color */
+    text-shadow: 0 0 10px #00c0ff, 0 0 20px #00c0ff, 0 0 30px #00c0ff, 0 0 40px #00c0ff, 0 0 50px #00c0ff, 0 0 60px #00c0ff, 0 0 70px #00c0ff; /* Text shadow for glow effect */
+  }

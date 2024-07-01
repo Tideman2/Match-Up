@@ -1,0 +1,74 @@
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust grid columns as needed */
+    gap: 10px;
+    padding-left: auto;
+    padding-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Shadow for the game board */
+    position: relative; /* Ensure position for glowing effect */
+    overflow: hidden; /* Hide overflow for glowing effect */
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between columns */
+    align-items: center;
+  }
+  
+  .col {
+    list-style: none;
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    background-color: black; /* Black background */
+    color: blue; /* Blue text */
+    font-size: 24px; /* Adjust font size as needed */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #00c0ff, 0 0 40px #00c0ff; /* Text shadow for glow effect */; /* Shadow for the cells */
+  }
+  
+  .col.occupied {
+    background-color: darkblue; /* Adjust color for occupied cells */
+  }
+  
+  /* Glow effect for the game board */
+  .game-board::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: radial-gradient(circle, black, white);
+    z-index: -1;
+    border-radius: 10px;
+    animation: glow 2s linear infinite;
+  }
+
+  .highlight {
+    text-align: center;
+    font-weight: bold;
+    color: #00c0ff;
+  }
+  
+  @keyframes glow {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
